@@ -15,7 +15,6 @@ main {
     padding: 0.2em 0.5em;
     text-align: center;
     font-size: 1.5em;
-    margin-bottom: 1em;
   }
 
   button {
@@ -23,5 +22,10 @@ main {
     padding: 0.3em 0.5em;
     border-radius: 0.5em;
     cursor: pointer;
+    margin: 1em 0 2em 0;
+  }
+
+  .output {
+    height: 2em;
   }
 }

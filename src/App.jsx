@@ -25,12 +25,12 @@ function App() {
         onChange={(event) => setRomanNumeral(event.target.value)}
       />
       <button onClick={getServerResults}>Calculate</button>
-      <div className="output">
+      <h2 className="output">
         {calculating
           ? "Calculating..."
           : Object.keys(serverResults).length > 0 &&
             JSON.stringify(serverResults)}
-      </div>
+      </h2>
     </main>
   );
 }
