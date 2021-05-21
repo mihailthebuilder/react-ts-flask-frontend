@@ -30,7 +30,7 @@ function App() {
           ? "Calculating..."
           : Object.keys(serverResults).length > 0 &&
             Object.entries(serverResults).map(([key, value]) => (
-              <p>
+              <p key={key}>
                 {key}: {value}
               </p>
             ))}
