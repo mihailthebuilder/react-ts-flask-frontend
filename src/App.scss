@@ -3,4 +3,8 @@ main {
   height: 100vh;
   background: #086375;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
