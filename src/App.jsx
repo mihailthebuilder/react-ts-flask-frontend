@@ -1,12 +1,20 @@
 import { useState } from "react";
+import axios from "axios";
 
 import "./App.scss";
 
 function App() {
   const [romanNumeral, setRomanNumeral] = useState("");
+  const [calculating, setCalculating] = useState(false);
   const [serverResults, setServerResults] = useState({});
 
-  const getServerResults = () => {};
+  const getServerResults = () => {
+    setCalculating(true);
+    axios.get("http://localhost:5000/" + romanNumeral).then((res) => {
+      setCalculating(false);
+      setServerResults(res);
+    });
+  };
 
   return (
     <main>
@@ -16,7 +24,13 @@ function App() {
         value={romanNumeral}
         onChange={(event) => setRomanNumeral(event.target.value)}
       />
-      <button onCLick={getServerResults}>Calculate</button>
+      <button onClick={getServerResults}>Calculate</button>
+      <div className="output">
+        {calculating
+          ? "Calculating..."
+          : Object.keys(serverResults).length > 0 &&
+            JSON.stringify(serverResults)}
+      </div>
     </main>
   );
 }
