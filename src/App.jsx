@@ -10,7 +10,7 @@ function App() {
 
   return (
     <main>
-      <h1>Input the Roman numeral</h1>
+      <h1>Input a Roman numeral</h1>
       <input
         type="text"
         value={romanNumeral}
