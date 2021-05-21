@@ -12,7 +12,7 @@ function App() {
     setCalculating(true);
     axios.get("http://localhost:5000/" + romanNumeral).then((res) => {
       setCalculating(false);
-      setServerResults(res);
+      setServerResults(res.data);
     });
   };
 
@@ -25,12 +25,16 @@ function App() {
         onChange={(event) => setRomanNumeral(event.target.value)}
       />
       <button onClick={getServerResults}>Calculate</button>
-      <h2 className="output">
+      <div className="output">
         {calculating
           ? "Calculating..."
           : Object.keys(serverResults).length > 0 &&
-            JSON.stringify(serverResults)}
-      </h2>
+            Object.entries(serverResults).map(([key, value]) => (
+              <p>
+                {key}: {value}
+              </p>
+            ))}
+      </div>
     </main>
   );
 }
