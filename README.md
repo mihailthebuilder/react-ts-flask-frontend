@@ -4,7 +4,7 @@
 
 I use React for the front-end and `axios` to make the HTTP request to the back-end.
 
-You can launch the front-end in local using `npm run start`. You'll also need to launch the back-end locally by running `flask run`.
+You can launch the front-end in local using `npm run start`. You'll also need to launch the [back-end](https://github.com/mihailthebuilder/react-flask-challenge-2-and-4) locally by running `flask run`.
 
 ## Problem 4
 
