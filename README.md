@@ -28,7 +28,7 @@ Add the following key/value pairs inside the `scripts` key in `package.json`:
 
 ```json
 {
-  "scripts:" {
+  "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   }
