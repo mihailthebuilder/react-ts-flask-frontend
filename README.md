@@ -8,6 +8,8 @@ You can launch the front-end in local using `npm run start`. You'll also need to
 
 ## Problem 4
 
+Link to [live site](https://mihailthebuilder.github.io/react-flask-challenge-3-and-4/).
+
 See [this repo](https://github.com/mihailthebuilder/react-flask-challenge-2-and-4) for instructions on hosting the back-end.
 
 ### Hosting front-end in the cloud
