@@ -10,7 +10,12 @@ function App() {
 
   const getServerResults = () => {
     setCalculating(true);
-    axios.get("http://localhost:5000/" + romanNumeral).then((res) => {
+    const requestUrl =
+      window.location.hostname === "localhost"
+        ? "http://localhost:5000/"
+        : "https://desolate-harbor-87386.herokuapp.com/";
+
+    axios.get(requestUrl + romanNumeral).then((res) => {
       setCalculating(false);
       setServerResults(res.data);
     });
