@@ -4,7 +4,7 @@
 
 I use React for the front-end and `axios` to make the HTTP request to the back-end.
 
-You can launch the front-end in local using `npm run start`
+You can launch the front-end in local using `npm run start`. You'll also need to launch the back-end locally by running `flask run`.
 
 ## Problem 4
 
@@ -36,3 +36,5 @@ Add the following key/value pairs inside the `scripts` key in `package.json`:
 Now you can quickly deploy the project by running `npm run deploy`
 
 On the GitHub repo, go to Settings > Pages and select the `gh-pages` branch to launch the site.
+
+**Note**: The front-end automatically knows whether to connect to the local back-end or the one on Heroku. This is done by checking if `window.location.hostname === "localhost"`
