@@ -29,7 +29,7 @@ function App() {
         value={romanNumeral}
         onChange={(event) => setRomanNumeral(event.target.value)}
       />
-      <button onClick={getServerResults}>Calculate</button>
+      <button type="button" onClick={getServerResults}>Calculate</button>
       <div className="output">
         {calculating
           ? 'Calculating...'
