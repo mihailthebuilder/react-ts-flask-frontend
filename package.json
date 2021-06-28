@@ -21,8 +21,8 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "lint": "eslint src/* public/* ./package.json ./.eslintrc.json",
-    "lint:fix": "eslint src/* public/* ./package.json ./.eslintrc.json --fix"
+    "lint": "eslint --ext js,jsx,ts,tsx,json src ./package.json ./.eslintrc.json",
+    "lint:fix": "eslint --ext js,jsx,ts,tsx,json src ./package.json ./.eslintrc.json --fix"
   },
   "eslintConfig": {
     "extends": [
