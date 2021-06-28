@@ -21,7 +21,6 @@
         "@typescript-eslint"
     ],
     "rules": {
-        // note you must disable the base rule as it can report incorrect errors - https://stackoverflow.com/questions/63818415/react-was-used-before-it-was-defined/64024916#64024916
         "no-use-before-define": "off",
         "@typescript-eslint/no-use-before-define": ["error"]
     }
